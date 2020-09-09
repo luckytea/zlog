@@ -12,9 +12,12 @@ import (
 func New(ver string) *zerolog.Logger {
 	var output io.Writer
 
-	if ver == "dev" {
+	switch ver {
+	case "dev":
 		output = zerolog.NewConsoleWriter()
-	} else {
+	case "test":
+		output = nil
+	default:
 		output = os.Stdout
 	}
 
