@@ -1,5 +1,5 @@
-module github.com/LuckyTea/zlog
+module github.com/luckytea/zlog
 
-go 1.14
+go 1.16
 
-require github.com/rs/zerolog v1.19.0
+require github.com/rs/zerolog v1.21.0
