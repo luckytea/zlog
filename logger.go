@@ -16,7 +16,7 @@ func New(ver string) *zerolog.Logger {
 	case "dev":
 		output = zerolog.NewConsoleWriter()
 	case "test":
-		output = nil
+		output = io.Discard
 	default:
 		output = os.Stdout
 	}
